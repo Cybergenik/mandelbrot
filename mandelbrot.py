@@ -1,5 +1,4 @@
 # Mandelbrot fractal 
-# FB - 201003254 
 from PIL import Image 
   
 # drawing area 
@@ -14,6 +13,7 @@ maxIt = 255
 # image size 
 imgx = 512
 imgy = 512
+
 image = Image.new("RGB", (imgx, imgy)) 
   
 for y in range(imgy): 

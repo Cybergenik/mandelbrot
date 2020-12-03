@@ -1,8 +1,6 @@
 # Mandelbrot fractal 
-# FB - 201003254 
 from PIL import Image 
   
-# drawing area 
 xa = -2.0
 xb = 1.0
 ya = -1.5
@@ -14,6 +12,7 @@ maxIt = 255
 # image size 
 imgx = 512
 imgy = 512
+
 image = Image.new("RGB", (imgx, imgy)) 
   
 for y in range(imgy): 
@@ -26,5 +25,6 @@ for y in range(imgy):
             if abs(z) > 2.0: break
             z = z * z + c 
         image.putpixel((x, y), (i % 4 * 64, i % 8 * 32, i % 16 * 16)) 
+
 image = image.convert("1")
 image.show()
